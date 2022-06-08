@@ -40,3 +40,22 @@
 //     clearInterval(intervalId);
 // }
 
+var colorsArray =[];
+var intervalId;
+var randomColor;
+function startMyFunc(){
+    if(colorsArray.length<=5){
+        colorsArray.push(color_id.value);
+    }
+    if(colorsArray.length == 5){
+        intervalId = setInterval(()=>{
+        h1_id.innerHTML = text_id.value;
+        randomColor = Math.floor(Math.random()*6);
+        h1_id.style.color = colorsArray[randomColor];
+     },10)
+  }
+}
+
+function stopFunc(){
+    clearInterval(intervalId);
+}
